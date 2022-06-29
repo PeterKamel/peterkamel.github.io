@@ -1,0 +1,490 @@
+
+/*---------------------------------------------------*/
+/*	01) BODY, ALL, HEADERS
+/*---------------------------------------------------*/
+
+html {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px
+}
+body{
+	font-family: "Poppins";
+	font-size: 18px;
+	line-height: 1.5;
+	letter-spacing: 0px;
+	word-wrap: break-word;
+	font-weight: 400;
+	background-color: #0b0c10;
+	color: #c5c6c7;
+}
+body::-webkit-scrollbar {
+	width: 11px;
+}
+body{
+	scrollbar-width: thin;
+	scrollbar-color: #c5c6c7 #1f2833;
+}
+body:-webkit-scrollbar-track {
+	background: #1f2833;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: #1f2833;
+	border-radius: 6px;
+	border: 3px solid #0b0c10;
+}
+.container{
+	max-width: 1400px;
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	height:auto;
+	position:relative;
+	padding: 0px 40px;
+	clear:both;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:600;
+	line-height: 1.2;
+	font-family: "Poppins";
+	color: #66fcf1;
+}
+h1 { font-size: 45px; }
+h2 { font-size: 36px; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+.all{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.all *{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+
+/*---------------------------------------------------*/
+/*	02) TOPBAR
+/*---------------------------------------------------*/
+
+.topbar{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 10;
+}
+.topbar .topbar_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 45px
+}
+.topbar .logo{
+	display: inline-block;
+}
+.topbar .logo img{
+	max-width: 125px;
+}
+.topbar .right{
+	display: flex;
+	align-items: center;
+}
+.topbar .right .sections{
+	position: relative;
+	top: 3px;
+}
+.topbar .right .sections ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.topbar .right .sections ul li{
+	margin: 0px 15px 0px 0px;
+	display: inline-block;
+}
+.topbar .right .sections ul li:last-child{
+	margin-right: 0px;
+}
+.topbar .right .sections ul li a{
+	text-decoration: none;
+	color: #c5c6c7;
+}
+.topbar .right .sections ul li a:hover{
+	color: #d70404;
+}
+.topbar .trigger_wrapper{
+	position: relative;
+}
+.topbar .trigger_wrapper .inner{
+	width: 48px;
+	height: 24px;
+	position: relative;
+}
+.topbar .trigger_wrapper .inner span{
+	width: 48px;
+	height: 3px;
+	display: block;
+	position: absolute;
+	background-color: #000;
+}
+.topbar .trigger_wrapper .inner .inner span:first-child{
+	top: 0px;
+	left: 0px;
+}
+.topbar .trigger_wrapper .inner span:last-child{
+	bottom: 0px;
+	right: 0px;
+	width: 33px;
+}
+.topbar .trigger_wrapper:hover span:last-child{
+	width: 48px;
+}
+.topbar .trigger_wrapper .inner span:nth-child(2){
+	top: 50%;
+	left: 0px;
+}
+
+/*---------------------------------------------------*/
+/*	03) BASE
+/*---------------------------------------------------*/
+
+.base{
+	width: 100%;
+	min-height: 100vh;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.base .background_shape{
+	position: absolute;
+	width: 76%;
+	top: 0px;
+	left: 0px;
+	height: calc(100vh + 0px);
+	background-color: #1f2833;
+	clip-path: polygon(100% 0%, 81% 86%, 0% 100%, 0% 0%);
+}
+.base .background_shape.opened{
+	height: calc(100vh + 65px);
+}
+.base .base_content{
+	width: 100%;
+	height: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	z-index: 3;
+}
+.base .content_inner{
+	width: 100%;
+	min-height: 100vh;
+	float: left;
+	clear: both;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.base .content_inner .main_info{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: calc(100vh - 150px);
+	padding-top: 0px;
+}
+.base .left{
+	width: 50%;
+}
+.base .subtitle{
+	display: inline-block;
+	color: #c5c6c7;
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.base .name{
+	font-size: 120px;
+	font-weight: 700;
+	line-height: 1;
+	margin-bottom: 22px;
+}
+.base .text{
+	font-size: 24px;
+	margin-bottom: 27px;
+}
+.base .right{
+	width: 50%;
+	padding-left: 230px;
+}
+.base .right .me{
+	width: 100%;
+	border-radius: 25px;
+	padding: 10px;
+}
+
+/*---------------------------------------------------*/
+/*	04) ABOUT
+/*---------------------------------------------------*/
+
+.bigbox{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	border-radius: 10px;
+	background-color: #1f2833;
+	box-shadow: 7px 7px 72px rgba(34, 118, 214, 0.1);
+	padding: 0px 70px;
+	margin-bottom: 70px;
+}
+.medbox{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.section_about{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+}
+.section_about .bigtitle{
+	max-width: 100%;
+}
+.bigtitle{
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.bigtitle span{
+	font-size: 21px;
+	color: #d70404;
+	font-weight: 700;
+	display: inline-block;
+	margin-bottom: 6px;
+	margin-top: 30px;
+}
+.bigtitle h3{
+	font-size: 47px;
+	font-weight: 700;
+}
+.section_about .right{
+	width: 80%;
+	padding-left: 75px;
+	position: relative;
+	top: -8px;
+}
+.section_about .right .bigger_text{
+	width: 100%;
+	float: left;
+	padding: 25px 0px;
+}
+.section_about .right .bigger_text p{
+	font-size: 21px;
+	font-weight: 500;
+	color: #c5c6c7;
+	line-height: 1.6;
+}
+.section_about .right .text{
+	width: 100%;
+	float: left;
+	margin-bottom: 38px;
+}
+
+/*---------------------------------------------------*/
+/*	05) SKILLS
+/*---------------------------------------------------*/
+
+.section_skills{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-left: 72px;
+}
+.section_skills .bigger_text p{
+	font-size: 21px;
+	font-weight: 500;
+	color: #c5c6c7;
+	line-height: 1.6;
+}
+.section_skills .skill_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 70px;
+	margin: 0px 0px 0px -100px;
+}
+.section_skills .skill_list ul{
+	margin: 0px 0px 0px -25px;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 40px;
+}
+.section_skills .skill_list ul li{
+	margin: 0px 0px 25px 0px;
+	width: 33.3333%;
+	float: left;
+	padding-left: 25px;
+}
+.section_skills .skill_list ul li .list_inner{
+	width: 100%;
+	height: 100%;
+	clear: both;
+	float: left;
+	position: relative;
+	padding: 60px 40px 58px 40px;
+	border-radius: 15px;
+	text-align: center;
+	background-color: #2e3b4b;
+	box-shadow: 7px 7px 98px rgba(9,47,104,.07);
+}
+.section_skills .skill_list ul li .list_inner:hover{
+	box-shadow: 7px 7px 98px rgba(9,47,104,.15);
+}
+.section_skills .skill_list ul li .title{
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+/*---------------------------------------------------*/
+/*	6) Curriculum
+/*---------------------------------------------------*/
+
+.toptext{
+	width: 78%;
+	margin-left: 70px;
+}
+.curriculum .bigger_text p{
+	font-size: 21px;
+	font-weight: 500;
+	color: #c5c6c7;
+	line-height: 1.6;
+}
+.curriculum{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.curriculum .curlist{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 70px;
+	margin-bottom: 40px;
+}
+.curriculum .curlist ul{
+	margin: 0px 0px 0px -25px;
+	list-style-type: none;
+}
+.curriculum .curlist ul li{
+	margin: 0px 0px 25px 0px;
+	width: 33.3333%;
+	float: left;
+	padding-left: 25px;
+}
+.curriculum .curlist ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.curpic{
+	width: 100%;
+	border-radius: 15px 15px 0px 0px;
+}
+.curriculum .curlist ul li .details{
+	width: 100%;
+	float: left;
+	padding: 30px 30px 28px 30px;
+	box-shadow: 7px 7px 30px rgba(108,99,255,.07);
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.curriculum .curlist ul li .details .uni{
+	margin-bottom: 3px;
+	display: inline-block;
+}
+.curriculum .curlist ul li .details .uni a{
+	text-decoration: none;
+	color: #66fcf1;
+	font-size: 16px;
+	font-weight: 700;
+}
+.curriculum .curlist ul li .details .uni a:hover{
+	color: #d70404;
+}
+.curriculum .curlist ul li .details .title a{
+	text-decoration: none;
+	color: #c6c7c8;
+	font-size: 21px;
+	font-weight: 700;
+	display: inline-block;
+}
+.curriculum .curlist ul li .details .title a:hover{
+	color: #d70404;
+}
+
+/*---------------------------------------------------*/
+/*	7) Contact
+/*---------------------------------------------------*/
+
+.mysites{
+	text-align: center;
+}
+
+/*---------------------------------------------------*/
+/*	8) Phones Responsiveness
+/*---------------------------------------------------*/
+
+@media (max-width: 480px) {
+
+	.topbar_inner{font-size: 10px;}
+	.topbar .container{margin: 0%; padding-right: 10px;}
+	
+	.base .container {padding-left:10px; padding-right:10px;}
+	.base .right{padding: 0%;}
+	.base .right .me{width:190px;}
+	.base .subtitle{font-size:14px;}
+	.base .name{font-size: 45px;}
+	.base .text{font-size: 14px; position: absolute; margin-top: 50px; width:100%;}
+
+	.container{padding-left: 3%; padding-right: 1%; }
+	.bigbox{width: 100%; padding: 0%; margin-bottom:5%; margin-top: 5%;}
+	.section_about .right{width: 100%; padding: 20px; margin: 0;}
+	.bigtitle span{font-size: 14px;}
+	.bigtitle h3{font-size: 24px;}
+	.bigger_text{font-size: 18px;}
+	.text{font-size: 14px;}
+
+	.section_skills{width: 100%; padding: 20px; margin: 0;}
+	.section_skills .skill_list {margin-left: -20px;}
+	.section_skills .skill_list ul li {width: 100%;}
+
+	.curriculum{width: 100%; padding: 20px; margin: 0;}
+	.toptext{width: 100%; margin: 0%;}
+	.curriculum .curlist {margin-left: -20px;}
+	.curriculum .curlist ul li {width: 100%;}
+
+	.footer{font-size: 10px;}
+}
