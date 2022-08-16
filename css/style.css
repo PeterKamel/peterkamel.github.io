@@ -3,6 +3,10 @@
 /*	01) BODY, ALL, HEADERS
 /*---------------------------------------------------*/
 
+* {
+	scroll-behavior: smooth;
+}
+
 html {
 	overflow-x: hidden;
 	padding: 0px;
